@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "767049452554",
+    "firebase_url": "https://entertanment-a7503-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "entertanment-a7503",
+    "storage_bucket": "entertanment-a7503.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767049452554:android:377e422d7499a0530263f3",
+        "android_client_info": {
+          "package_name": "com.example.leetincoginto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "767049452554-prjdaslghq81uueu98oehaqgp9n2fdf8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHjoFao0VGDuvfV8EfwQjfeZuEYOXSUtI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "767049452554-grl9mu7n1dj97913ccdd3sfa6icra79h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

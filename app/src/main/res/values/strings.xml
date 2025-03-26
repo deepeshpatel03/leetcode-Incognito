@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Leetincoginto</string>
+
+    <string name="welcome">Welcome</string>
+    <string name="intro_message">Sign In or Create Account?</string>
+    <string name="welcome_screen_image">App Logo</string>
+    <string name="go_to_sign_in">Go to Sign In</string>
+    <string name="no_account_yet_msg">Don\'t have an account yet? Sign Up</string>
+    <string name="back_button">Back</string>
+    <string name="create_new_account">Create a New  </string>
+    <string name="full_name">Full Name</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="email_address">Email Address</string>
+    <string name="sample_email">example@email.com</string>
+    <string name="create_password">Create Password</string> <!-- ✅ Add This -->
+    <string name="enter_your_password">Enter your password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="welcome_back">Welcome Back</string> <!-- ✅ Add This -->
+    <string name="remember_me">Remember Me</string>
+    <string name="sign_in">Sign In</string>
+</resources>
