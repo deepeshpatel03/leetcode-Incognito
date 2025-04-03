@@ -59,10 +59,6 @@ class MainActivity : ComponentActivity() {
 
                 val viewModel: LeetCodeViewModel = viewModel()
 
-
-
-
-
                 // Hold execution until userProfile is not null
 
                     Appnav(

@@ -13,9 +13,9 @@ class AuthRepository @Inject constructor() {
     suspend fun signInWithEmail(email: String, password: String): Boolean {
         return try {
             auth.signInWithEmailAndPassword(email, password).await()
-            true // ✅ Login successful
+            true //  Login successful
         } catch (e: Exception) {
-            false // ❌ Login failed
+            false //  Login failed
         }
     }
 

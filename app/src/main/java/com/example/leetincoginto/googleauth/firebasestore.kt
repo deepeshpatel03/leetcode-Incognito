@@ -24,7 +24,7 @@ class firestoreUserRepository @Inject constructor(
         return auth.currentUser?.uid
     }
 
-    // 1️⃣ Add a new user
+    // 1 Add a new user
     suspend fun addUser(username: String, leetcodeId: String): Boolean {
         val userUID = getCurrentUserUID() ?: return false
 
@@ -39,7 +39,7 @@ class firestoreUserRepository @Inject constructor(
         }
     }
 
-    // 2️⃣ Get user details
+    // 2⃣ Get user details
     suspend fun getUser(userUID: String): User? {
         return try {
             val document = usersCollection.document(userUID).get().await()
@@ -50,7 +50,7 @@ class firestoreUserRepository @Inject constructor(
         }
     }
 
-    // 3️⃣ Update user's LeetCode ID
+    // 3️ Update user's LeetCode ID
     suspend fun updateLeetCodeId(userUID: String, newLeetcodeId: String): Boolean {
         return try {
             usersCollection.document(userUID).update("leetcodeId", newLeetcodeId).await()
@@ -62,7 +62,7 @@ class firestoreUserRepository @Inject constructor(
         }
     }
 
-    // 4️⃣ Delete user
+    // 4️ Delete user
     suspend fun deleteUser(userUID: String): Boolean {
         return try {
             usersCollection.document(userUID).delete().await()
@@ -74,7 +74,7 @@ class firestoreUserRepository @Inject constructor(
         }
     }
 
-    // 5️⃣ Add a friend by username
+    // 5️ Add a friend by username
     suspend fun addFriend(userUID: String, friendUsername: String): Boolean {
         return try {
             val userRef = usersCollection.document(userUID)
@@ -96,7 +96,7 @@ class firestoreUserRepository @Inject constructor(
         }
     }
 
-    // 6️⃣ Remove a friend by username
+    // 6️ Remove a friend by username
     suspend fun removeFriend(userUID: String, friendUsername: String): Boolean {
         return try {
             val userRef = usersCollection.document(userUID)
@@ -118,8 +118,8 @@ class firestoreUserRepository @Inject constructor(
         }
     }
 
-    // 7️⃣ Get all friends (list of usernames)
-    // 7️⃣ Get all friends (list of usernames)
+    // 7️Get all friends (list of usernames)
+    // 7️ Get all friends (list of usernames)
     suspend fun getFriends(userUID: String): List<String> {
         return try {
             val document = usersCollection.document(userUID).get().await()

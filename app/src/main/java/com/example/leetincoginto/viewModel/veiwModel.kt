@@ -337,16 +337,16 @@ val checkfriend=MutableStateFlow(0)
         return sb.toString()
     }
 
-    private val _story = MutableStateFlow ("") // ✅ Holds generated content
+    private val _story = MutableStateFlow ("")
     val story = _story.asStateFlow()
-    private val _messages = MutableStateFlow<List<Message>>(emptyList()) // ✅ Holds chat messages
+    private val _messages = MutableStateFlow<List<Message>>(emptyList())
     val messages = _messages.asStateFlow()
 
     val generativeModel = GenerativeModel(
         modelName = "gemini-2.0-flash",
-        apiKey = "AIzaSyCeopdJ7M46ulAHxVUHyFLwpx-OmoAfhAA" // ✅ Secure way to access API Key
+        apiKey = "AIzaSyCeopdJ7M46ulAHxVUHyFLwpx-OmoAfhAA"
     )
-    private val _isLoading = MutableStateFlow(false) // ✅ Track AI response state
+    private val _isLoading = MutableStateFlow(false) //   Track AI response state
     val isLoading = _isLoading.asStateFlow()
     lateinit var chat  : Chat
      var start=0;

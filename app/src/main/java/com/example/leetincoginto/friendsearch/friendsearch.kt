@@ -27,6 +27,7 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.input.ImeAction
 import androidx.navigation.NavController
 import com.example.leetincoginto.Apisetup.ApiResponse
@@ -40,6 +41,9 @@ fun SearchScaffold(onSearch: (search) -> Unit, apiResponse: ApiResponse?,onADD:(
     var sortAscending by remember { mutableStateOf(true) }
     var showFilters by remember { mutableStateOf(false) }
     var limit by remember { mutableStateOf("10") }
+    val uriHandler = LocalUriHandler.current
+
+
 
     Column(modifier=Modifier.background(Color.Black).padding(16.dp)){
         Row(
@@ -155,7 +159,11 @@ fun SearchScaffold(onSearch: (search) -> Unit, apiResponse: ApiResponse?,onADD:(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(8.dp)
-                                .wrapContentHeight(),
+                                .wrapContentHeight()
+                                .clickable {
+                                    val username = user.handle.substringBefore('@') // Extract only the username
+                                    val leetCodeUrl = "https://leetcode.com/$username"
+                                    uriHandler.openUri(leetCodeUrl) },
                             colors = CardDefaults.outlinedCardColors(containerColor = Color.DarkGray),
                             border = BorderStroke(2.dp, borderColor)
                         ) {
